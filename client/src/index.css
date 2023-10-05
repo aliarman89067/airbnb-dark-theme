@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  box-sizing: border-box;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"] {
+  @apply w-full px-2 py-3 rounded-lg bg-transparent border border-gray-400 outline-none bg-white text-gray-800;
+}
+textarea {
+  @apply w-full px-2 py-3 rounded-lg bg-transparent border border-gray-400 outline-none bg-white text-gray-800 h-32 resize-none;
+}
+input:focus {
+  background-color: rgb(231, 242, 251);
+}
+button.primary {
+  @apply w-full py-3 rounded-lg bg-primary dark:bg-lPrimary transition-all duration-300 text-white;
+}
+.custom-shadow {
+  transition: all 0.5s linear;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+}
+.custom-scrollbar::-webkit-scrollbar {
+  @apply w-3 bg-transparent rounded-full;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 rounded-full;
+}
+button:disabled {
+  @apply opacity-80 cursor-not-allowed;
+}
+.handleButtons {
+  display: none;
+}
+.card-container:hover .handleButtons {
+  display: unset;
+}
+.date {
+  color-scheme: dark;
+}
+.date:focus {
+  background-color: transparent;
+}
+.dark .date {
+  color-scheme: light;
+}
